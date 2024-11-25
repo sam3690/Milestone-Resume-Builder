@@ -1,33 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 body{
     box-sizing: border-box;
-    background-color: #4d73dd;
+    background-color: #dbe3f7;
     justify-content: center;
     align-content: center;
     margin-left: 20%;
     margin-right: 20%;
+        @media (max-width: 1200px) {
+            margin-left: 20%;
+            margin-right: 20%;
+        }
+        @media (max-width: 768){
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+        @media (max-width: 480px){
+            margin-left: 10%;
+            margin-right: 5%;
+        }
+    }
+    @page{
+        size: A4;
+        margin: 0;
     }
 
 h1{
-    width: 400px;
+    justify-self: start;
+    text-align: left;
+    float: left;
+    width: fit-content;
     margin-left: 70px;
+    margin-right: 0px;
     color: white;
+    font-size: 60px;
+    margin-bottom: 20px;
+    font-family: "poppins", sans-serif;
+    font-weight: 500;
+    
+    @media (max-width: 1200px) {
+        font-size: 40px;
+    }
+    @media (max-width: 768px) {
+        font-size: 30px;
+    }
 }
 
-textarea{
-    
+.desc{
+    flex-wrap: wrap;
     margin-left: 30px;
+    margin-right:10%;
     color:white;
-    height: 100%;
+    /* height: fit-content; */
+    field-sizing: content;
+    max-height: 100px;
+    scroll-behavior: unset;
+    contain: content;
     size-adjust: false;
     border: 0;
-    resize: none;
+    resize: inherit;
     outline: none;
     size-adjust: unset;
-    width: 500px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 100%;
+    flex: contain;
+    min-width: none;
+    max-width: 600px;
+    font-family: poppins, sans-serif;
     background-color: transparent;
     filter: drop-shadow(0 4px 3px rgba(0, 0, 0, 0.07)) drop-shadow(0 2px 2px rgba(0, 0, 0, 0.06)); 
+    overflow: hidden;
+    margin-bottom: 10px;
+    
 
 }
 
@@ -39,6 +82,7 @@ textarea{
     justify-content: center;
     align-items: center;
     width: 100%;
+    max-width: 1000px;
     height: 100%;
     background-color: #fdfbf9;
     /* backdrop-filter: blur(10px); */
@@ -47,20 +91,117 @@ textarea{
 }
 
 .header{
+    display: flex;
     justify-items: center;
-    width: inherit;
+    width: 100%;
+    display: block;
     height: 100%;
-    border-radius: 4px;
+    /* max-height: 250px; */
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
     background-color: #2f437a;
+    flex-wrap: wrap;
 }
 
 .profile-pic{
-    align-self: right;
-    border-radius: 50px;
+    border-radius: 100px;
     width: 200px;
     height: 200px;
-    margin-right: 10px;
-    /* border-radius: 50%; */
-    /* border: 2px solid #2f437a; */
-  
+    float: right;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    @media (max-width: 1300px) {
+        width: 150px;
+        height: 150px;
+    }
+    @media (max-width: 1200px) {
+        width: 100px;
+        height: 100px;
+    }
+    @media (max-width: 768px) {
+        width: 100px;
+        height: 100px;
+    }
+    @media (max-width: 480px) {
+        width: 50px;
+        height: 50px;
+    }
+
+}
+
+.contacts{
+        justify-content: center;
+        align-items: center;
+        line-break: normal;
+        background-color: #777778;
+        color: white;
+        font-family: poppins, sans-serif;
+        /* position: absolute; */
+        display: inline-flex;
+        /* margin-top: 300px; */
+        width: 100%;
+        height: 25px;
+        justify-self: flex-end;
+        /* width: 100%; */
+        /* max-width: 1000; */
+        @media (max-width: 768px) {
+            height: 30px;
+            
+        }
+        @media (max-width: 480px) {
+            height: 30px;
+            
+        }
+}
+
+.linebreak {margin-top:50px; display: block;}
+
+
+.contact-1{
+    float: left;
+    justify-self: left;
+    font-size: 17px;
+    
+
+    @media (max-width: 900px) {
+        font-size: 12px;
+        margin-left: auto;
+
+    }
+    @media (max-width: 480px) {
+        font-size: 10px;
+        margin-left: auto;
+
+    }
+}
+.contact-2{
+    justify-self: center;
+    align-self: center;
+    margin-left: 100px;
+    
+    @media (max-width: 900px) {
+        font-size: 12px;
+        margin-left: auto;
+    }
+    @media (max-width: 480px) {
+        font-size: 10px;
+        margin-left: auto;
+        
+    }
+
+}
+.contact-3{
+    float: right;
+    justify-self: right;
+    margin-left: 100px;
+    
+    @media (max-width: 900px) {
+        font-size: 12px;
+        margin-left: auto;
+    }
+    @media (max-width: 480px) {
+        font-size: 10px;
+        margin-left: auto;        
+    }
 }
